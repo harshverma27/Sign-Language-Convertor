@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Sign Language Translator",
+  "version": "1.0",
+  "permissions": ["scripting"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; worker-src 'self' ; object-src 'self'"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["lib/tf.min.js", "content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["lib/*", "model/*", "labels.json"],
+      "matches": ["*://*.youtube.com/*"]
+    }
+  ]
+}
