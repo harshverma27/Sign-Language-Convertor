@@ -1,6 +1,5 @@
 # Sign Language Translator Chrome Extension
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TensorFlow.js Version](https://img.shields.io/badge/TensorFlow.js-4.22.0-orange)](https://www.tensorflow.org/js)
 
 A Chrome extension that converts sign language gestures in YouTube videos to text in real-time using machine learning.
